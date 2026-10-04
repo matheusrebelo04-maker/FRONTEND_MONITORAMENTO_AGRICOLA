@@ -116,7 +116,8 @@ function App() {
             ? "Crítico"
             : ultimo.nivel_risco === "ALTO"
             ? "Alto"
-            : ultimo.nivel_risco === "MEDIO" || ultimo.nivel_risco === "MÉDIO"
+            : ultimo.nivel_risco === "MEDIO" ||
+              ultimo.nivel_risco === "MÉDIO"
             ? "Médio"
             : "Baixo";
 
@@ -533,8 +534,6 @@ function App() {
   return (
     <div className="app">
 
-      {/* HEADER */}
-
       <header className="header">
 
         <div className="logo-area">
@@ -561,9 +560,6 @@ function App() {
         </div>
 
       </header>
-
-
-      {/* MENU */}
 
       <nav className="menu">
 
@@ -608,12 +604,7 @@ function App() {
 
       </nav>
 
-
-      {/* CONTEÚDO */}
-
       <main className="content">
-
-        {/* DASHBOARD */}
 
         {pagina === "dashboard" && (
           <>
@@ -646,9 +637,6 @@ function App() {
 
             </section>
 
-
-            {/* CARDS */}
-
             <section className="cards">
 
               <div className="card">
@@ -669,7 +657,6 @@ function App() {
 
               </div>
 
-
               <div className="card card-danger">
 
                 <span className="card-icon">
@@ -688,7 +675,6 @@ function App() {
 
               </div>
 
-
               <div className="card card-warning">
 
                 <span className="card-icon">
@@ -706,7 +692,6 @@ function App() {
                 </div>
 
               </div>
-
 
               <div className="card card-success">
 
@@ -728,9 +713,6 @@ function App() {
 
             </section>
 
-
-            {/* EQUIPAMENTOS ESP32 */}
-
             <section className="panel">
 
               <div className="panel-header">
@@ -749,7 +731,6 @@ function App() {
                 </div>
 
               </div>
-
 
               <div className="equipment-grid">
 
@@ -786,11 +767,9 @@ function App() {
 
                       </div>
 
-
                       <p className="equipment-location">
                         📍 {equipamento.local}
                       </p>
-
 
                       <div className="sensor-grid">
 
@@ -830,7 +809,6 @@ function App() {
 
                       </div>
 
-
                       <div className="equipment-alert">
 
                         <span>⚠️</span>
@@ -858,9 +836,6 @@ function App() {
 
             </section>
 
-
-            {/* RISCO */}
-
             <section className="dashboard-grid">
 
               <div className="panel">
@@ -882,12 +857,11 @@ function App() {
 
                 </div>
 
-                <RiskIndicator />
+                <RiskIndicator
+                  ocorrencias={ocorrencias}
+                />
 
               </div>
-
-
-              {/* DISTRIBUIÇÃO */}
 
               <div className="panel">
 
@@ -907,7 +881,6 @@ function App() {
 
                 </div>
 
-
                 <div className="risk-list">
 
                   <div className="risk-row">
@@ -922,7 +895,6 @@ function App() {
 
                   </div>
 
-
                   <div className="risk-row">
 
                     <span>
@@ -935,7 +907,6 @@ function App() {
 
                   </div>
 
-
                   <div className="risk-row">
 
                     <span>
@@ -947,7 +918,6 @@ function App() {
                     </strong>
 
                   </div>
-
 
                   <div className="risk-row">
 
@@ -967,9 +937,6 @@ function App() {
 
             </section>
 
-
-            {/* MAPA */}
-
             <section className="panel map-panel">
 
               <div className="panel-header">
@@ -986,7 +953,6 @@ function App() {
                   </p>
 
                 </div>
-
 
                 <div className="map-actions">
 
@@ -1014,16 +980,12 @@ function App() {
 
               </div>
 
-
               <MapaOperacional />
 
             </section>
 
           </>
         )}
-
-
-        {/* OCORRÊNCIAS */}
 
         {pagina === "ocorrencias" && (
 
@@ -1035,9 +997,6 @@ function App() {
           />
 
         )}
-
-
-        {/* RELATÓRIOS */}
 
         {pagina === "relatorios" && (
 
@@ -1060,7 +1019,6 @@ function App() {
 
             </div>
 
-
             <div className="report-box">
 
               <div className="report-icon">
@@ -1078,7 +1036,6 @@ function App() {
                 registradas.
               </p>
 
-
               <button
                 className="primary-button"
                 onClick={gerarRelatorio}
@@ -1093,9 +1050,6 @@ function App() {
         )}
 
       </main>
-
-
-      {/* FOOTER */}
 
       <footer className="footer">
 

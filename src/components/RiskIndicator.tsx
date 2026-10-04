@@ -176,12 +176,6 @@ function RiskIndicator({
    * =====================================================
    */
 
-  const inclinacao = telemetria
-    ? Math.abs(
-        Number(telemetria.inclinacao)
-      )
-    : 0;
-
   const temperatura = telemetria
     ? Number(telemetria.temperatura)
     : 0;
