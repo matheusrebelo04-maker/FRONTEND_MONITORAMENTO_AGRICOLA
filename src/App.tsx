@@ -101,7 +101,7 @@ interface LoginResponse {
   usuario: Usuario;
 }
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://sompo-api-bzu4.onrender.com";
 
 /*
  * =====================================================
@@ -5254,3 +5254,4 @@ function equipamentoComGPS(
 }
 
 export default App;
+

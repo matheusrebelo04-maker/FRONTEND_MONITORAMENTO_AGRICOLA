@@ -97,7 +97,7 @@ function App() {
   useEffect(() => {
     const buscarTelemetria = async () => {
       try {
-        const resposta = await fetch("http://localhost:8000/api/telemetria");
+        const resposta = await fetch("https://sompo-api-bzu4.onrender.com/api/telemetria");
 
         if (!resposta.ok) {
           throw new Error("Erro ao buscar telemetria");

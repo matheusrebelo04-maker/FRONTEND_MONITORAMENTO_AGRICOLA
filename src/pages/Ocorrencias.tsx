@@ -34,7 +34,7 @@ interface TelemetriaGPS {
   device_id?: string;
 }
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://sompo-api-bzu4.onrender.com";
 
 const tiposOcorrencia = [
   {
